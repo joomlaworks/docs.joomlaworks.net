@@ -1,5 +1,5 @@
 # SocialConnect for Joomla
-===
+---
 
 ## How to setup Facebook login and autoposting
 
