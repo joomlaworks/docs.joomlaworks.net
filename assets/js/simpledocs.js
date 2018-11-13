@@ -94,7 +94,6 @@
 
     // Bootstrap everything
     $(document).on('ready', function() {
-
         renderNav();
         initialLoad();
 
