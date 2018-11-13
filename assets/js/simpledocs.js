@@ -6,6 +6,14 @@
  * @license     https://www.joomlaworks.net/license
  */
 
+/*
+	Requirements to load before SimpleDocs.js:
+	- jQuery 1.9.x+ (https://jquery.com/)
+	- Showdown.js (http://showdownjs.com/)
+
+	Stored markdown (.md) documents should be saved in the /pages/ subfolder by default.
+*/
+
 (function($) {
     // Configuration
     var outputContainer = '#content';
