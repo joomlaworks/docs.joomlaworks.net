@@ -11,7 +11,20 @@
     - jQuery 1.9.x+ (https://jquery.com/)
     - Showdown.js (http://showdownjs.com/)
 
-    Stored markdown (.md) documents should be saved in the /pages/ subfolder by default.
+    Basic conventions (for things to work as easy as possible):
+    - You only need an entry index.html file to load everything.
+    - Add the JS files in order according to the requirements stated above (jQuery, Showdown.js, SimpleDocs.js).
+    - Store markdown (.md) documents in the /pages/ subfolder by default.
+    - Your are free to store your CSS, JS, images etc. wherever you want.
+    - For your homepage create a /pages/index.md file (with some welcome message for example).
+    - For your navigation create a /pages/menu.md file (with a simple Markdown list, nested or not).
+    - For pages that don't exist create a /pages/404.md file.
+    - You can organize your .md files inside /pages however you want (e.g. group them in subfolders).
+      Just make sure to properly map them in your /pages/menu.md file.
+
+    To Do:
+    - Create an initializer for the main index.html file,
+      so every configurable part of the script is managed there and not in this file.
 */
 
 (function($) {
@@ -23,11 +36,6 @@
     // Parse Markdown (showdown.js)
     var converter = new showdown.Converter();
 
-    // ucfirst() for JS
-    function ucfirst(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-    }
-
     // Trigger a GA page view entry (you need to load GA first inside index.html)
     function triggerGA(domain) {
         if (domain && typeof(ga) !== 'undefined') {
@@ -37,6 +45,11 @@
                 page: url.replace(domain, '')
             });
         }
+    }
+
+    // PHP's ucfirst() for JS
+    function ucfirst(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
     }
 
     // Update browser history

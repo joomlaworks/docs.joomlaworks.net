@@ -9,3 +9,5 @@
     * [AllVideos](pages/allvideos.md)
     * [Simple Image Gallery](pages/sig.md)
     * [Simple RSS Feed Reader](pages/srfr.md)
+* Nested Pages
+    * [File](pages/category/file.md)
