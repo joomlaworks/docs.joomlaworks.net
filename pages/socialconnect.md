@@ -26,8 +26,8 @@ Then
 	
 B) Under "Products >> Facebook Login", click on "Settings" and enter the following URLs in the "Valid OAuth Redirect URIs" field:
 
-https://YOUR_DOMAIN_HERE/index.php?option=com_socialconnect&view=login&task=facebookoauth
-https://YOUR_DOMAIN_HERE/administrator/index.php?option=com_socialconnect&view=authorize&service=facebook
+https://YOUR\_DOMAIN\_HERE/index.php?option=com_socialconnect&view=login&task=facebookoauth
+https://YOUR\_DOMAIN\_HERE/administrator/index.php?option=com_socialconnect&view=authorize&service=facebook
 
 Important: Make sure you use "https://" and that your site also runs under HTTPS.
 
