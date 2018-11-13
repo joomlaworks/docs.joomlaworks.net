@@ -25,6 +25,7 @@
     To Do:
     - Create an initializer for the main index.html file,
       so every configurable part of the script is managed there and not in this file.
+    - Create themes
 */
 
 (function($) {
