@@ -1,12 +1,12 @@
-# SocialConnect for Joomla
+## SocialConnect for Joomla
 
-## How to setup Facebook login and autoposting
+### How to setup Facebook login and autoposting
 
 https://developers.facebook.com/apps/
 
 Click on: + Add a New App
 
-/Users/fevangelou/Desktop/Screen Shot 2018-11-13 at 16.23.59.png
+![Add a New App](images/socialconnect/1.png)
 
 A)
 Add a Product: Facebook Login - click "Set Up" >> Web
@@ -26,8 +26,8 @@ Then
 	
 B) Under "Products >> Facebook Login", click on "Settings" and enter the following URLs in the "Valid OAuth Redirect URIs" field:
 
-https://YOUR\_DOMAIN\_HERE/index.php?option=com_socialconnect&view=login&task=facebookoauth
-https://YOUR\_DOMAIN\_HERE/administrator/index.php?option=com_socialconnect&view=authorize&service=facebook
+* https://YOUR\_DOMAIN\_HERE/index.php?option=com_socialconnect&view=login&task=facebookoauth
+* https://YOUR\_DOMAIN\_HERE/administrator/index.php?option=com_socialconnect&view=authorize&service=facebook
 
 Important: Make sure you use "https://" and that your site also runs under HTTPS.
 

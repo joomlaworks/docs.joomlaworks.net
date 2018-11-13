@@ -1,0 +1,7 @@
+body {margin:0;padding:0;background:#fafafa;font-family:'PT Sans', sans-serif;font-weight:400;font-size:14px;}
+header,
+footer {text-align:center;padding:10px 0;}
+#pageContainer {width:1120px;margin:10px auto;display:grid;grid-template-columns:20% 80%;}
+	#menu {padding:20px;}
+	#content {background:#fff;padding:20px;}
+		#content img {width:100%;height:auto;}

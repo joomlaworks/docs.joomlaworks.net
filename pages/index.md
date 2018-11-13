@@ -1,5 +1,3 @@
-# JoomlaWorks Documentation
+## Welcome to our documentation portal
 
-Please select a Joomla extension to see available documentation:
-
-* [SocialConnect for Joomla](pages/socialconnect.md)
+Please select a Joomla extension on your left to view the related support document.
