@@ -7,18 +7,18 @@
  */
 
 /*
-	Requirements to load before SimpleDocs.js:
-	- jQuery 1.9.x+ (https://jquery.com/)
-	- Showdown.js (http://showdownjs.com/)
+    Requirements to load before SimpleDocs.js:
+    - jQuery 1.9.x+ (https://jquery.com/)
+    - Showdown.js (http://showdownjs.com/)
 
-	Stored markdown (.md) documents should be saved in the /pages/ subfolder by default.
+    Stored markdown (.md) documents should be saved in the /pages/ subfolder by default.
 */
 
 (function($) {
     // Configuration
     var outputContainer = '#content';
     var navContainer = '#menu';
-    var gaDomain = 'https://docs.joomlaworks.net';
+    var gaDomain = ''; // e.g. https://docs.joomlaworks.net
 
     // Parse Markdown (showdown.js)
     var converter = new showdown.Converter();
@@ -30,7 +30,7 @@
 
     // Trigger a GA page view entry (you need to load GA first inside index.html)
     function triggerGA(domain) {
-        if (typeof(ga) !== 'undefined') {
+        if (domain && typeof(ga) !== 'undefined') {
             ga('send', {
                 hitType: 'pageview',
                 title: title,
@@ -41,23 +41,24 @@
 
     // Update browser history
     function updateBrowser(page, title, data) {
-	    if(!title) title = ucfirst(page.slice(8, page.length));
-        window.history.pushState('', title, page);
+        if (!title) title = ucfirst(page.slice(8, page.length));
+        history.pushState(data, title, page);
         document.title = title;
-        //triggerGA(gaDomain);
+        triggerGA(gaDomain);
     }
 
     // Get page
     function getPage(page, title, container, urlstate) {
+        var prefix = '#/'
         $.ajax({
             url: page,
             success: function(result) {
                 var output = converter.makeHtml(result);
                 $(container).html(output);
-                parseUrls(container);
                 if (urlstate) {
-                    updateBrowser('#/' + page.slice(0, page.length - 3), title, output);
+                    updateBrowser(prefix + page.slice(0, page.length - 3), title, output);
                 }
+                parseUrls(container);
             },
             error: function(req, status, error) {
                 getPage('pages/404.md', '404 - Not found', container, true)
@@ -68,7 +69,7 @@
     // Parse all .md URLs
     function parseUrls(el) {
         $(el + ' a[href\$=".md"]').each(function() {
-	        var title = $(this).html();
+            var title = $(this).html();
             var page = $(this).attr('href');
             $(this).on('click', function(e) {
                 e.preventDefault();
@@ -84,10 +85,12 @@
     }
 
     // First load
-    function initialLoad() {
-        // Check for a hash (pseudo page URL)
-        if (window.location.hash) {
-            var match = window.location.hash.match(/^#\/?(.*)$/)[1];
+    function initialLoad(hash) {
+        if (!hash) {
+            var hash = window.location.hash
+        }
+        if (hash) {
+            var match = hash.match(/^#\/?(.*)$/)[1];
         } else {
             var match = null;
         }
@@ -104,18 +107,9 @@
     $(document).on('ready', function() {
         renderNav();
         initialLoad();
-
-        var popped = ('state' in window.history && window.history.state !== null),
-            initialURL = window.location.href;
-
         $(window).on('popstate', function(e) {
-            var initialPop = !popped && window.location.href == initialURL
-            popped = true;
-            if (initialPop) return;
-
-            if (popped) {
-                initialLoad();
-            }
+            //console.log(e.originalEvent);
+            initialLoad(e.target.location.hash);
         });
     });
 })(jQuery);
