@@ -1,4 +1,4 @@
-## Navigation Menu
+### Navigation Menu
 
 * [Home](pages/index.md)
 * Commercial Extensions
