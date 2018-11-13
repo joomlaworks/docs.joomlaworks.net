@@ -4,9 +4,9 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
 /* Main Styling */
 body {margin:0;padding:0;background:#fafafa;font-family:'PT Sans',sans-serif;font-weight:400;font-size:16px;line-height:150%;}
 h1 {}
-h2 {color:#1769cf;font-size:40px;}
+h2 {color:#1769cf;font-size:32px;line-height:150%;}
 h3 {}
-h4 {font-size:28px;padding:10px 0;margin:20px 0 10px; border-bottom:1px solid #ccc;}
+h4 {font-size:28px;padding:10px 0;margin:20px 0 10px; border-bottom:1px solid #ccc;line-height:150%;}
 header,
 footer {text-align:center;padding:10px 0;}
 	footer p:first-child {font-weight:bold;}
