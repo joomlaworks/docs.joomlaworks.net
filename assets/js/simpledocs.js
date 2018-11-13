@@ -49,14 +49,13 @@
 
     // Get page
     function getPage(page, title, container, urlstate) {
-        var prefix = '#/'
         $.ajax({
             url: page,
             success: function(result) {
                 var output = converter.makeHtml(result);
                 $(container).html(output);
                 if (urlstate) {
-                    updateBrowser(prefix + page.slice(0, page.length - 3), title, output);
+                    updateBrowser('#/' + page.slice(0, page.length - 3), title, output);
                 }
                 parseUrls(container);
             },
@@ -85,7 +84,7 @@
     }
 
     // First load
-    function initialLoad(hash) {
+    function initialLoad(hash, urlstate) {
         if (!hash) {
             var hash = window.location.hash
         }
@@ -96,20 +95,21 @@
         }
         if (match) {
             var page = match + ".md";
-            getPage(page, false, outputContainer, true);
+            getPage(page, false, outputContainer, urlstate);
         } else {
             var page = 'pages/index.md';
-            getPage(page, false, outputContainer, true);
+            getPage(page, false, outputContainer, urlstate);
         }
     }
 
     // Bootstrap everything
     $(document).on('ready', function() {
         renderNav();
-        initialLoad();
+        initialLoad(null, true);
         $(window).on('popstate', function(e) {
             //console.log(e.originalEvent);
-            initialLoad(e.target.location.hash);
+            //console.log(e.target.location.hash);
+            initialLoad(null, false);
         });
     });
 })(jQuery);
