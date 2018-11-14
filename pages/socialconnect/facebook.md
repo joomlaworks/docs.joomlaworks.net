@@ -79,7 +79,19 @@ If you now switch back to the "Dashboard" and see "Finish Facebook Login Quickst
 ![Status: Live](images/socialconnect/6.png)
 
 
+#### Final Notes
+
+Use the "App ID" and "App Secret" in SocialConnect's settings, in the "Social Login Settings" to enable Facebook login integration.
+
+For auto-posting to Facebook, make sure the related option is set to "Enabled" in the "Social Auto Post Settings" section.
+
+This requires that you have authorized your Facebook application to post content on your behalf. If not, simply click on the "Authorize" linkand follow the steps as guided by Facebook. Once you complete the process the authorization pop up window will close and you will get a list of the available Facebook account and pages you can use with auto post.
+
+Note that in order to be able to authorize your Facebook application you need to already have setup a Facebook application in the "Social Login Settings". Additionally, make sure that you selected "Support my own business" under "Business Use", in the "Settings >> Basic" page of your app on Facebook.
+
+
 ### How to setup Facebook Comments
+
 If you wish to enable Facebook Comments on your site, you can simply re-use your "App ID" which you got when setting up your Facebook application before.
 
 The settings in detail:
