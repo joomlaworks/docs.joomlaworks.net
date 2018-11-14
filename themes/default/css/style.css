@@ -11,7 +11,7 @@ h1 {font-size:60px;font-weight:400;}
 h2 {color:#3B454E;font-size:28px;border-bottom:1px solid #e6ecf1;border-left:4px solid #744cbc;padding:20px;margin-bottom:40px;line-height:140%;}
 h3 {}
 h4 {font-size:24px;padding:10px 0;margin:20px 0 10px;border-bottom:1px solid #d4dadf;line-height:150%;text-transform:uppercase;}
-ul, ol {margin:0 0 0 16px;padding:4px;list-style:url(../images/arrow-right.svg);}
+ul, ol {margin:0 0 0 16px;padding:4px;}
     li {padding:2px 4px;margin:0;}
     li a {display:block;}
     li a:hover {background:#fff;}
@@ -22,6 +22,7 @@ ul, ol {margin:0 0 0 16px;padding:4px;list-style:url(../images/arrow-right.svg);
         .header h1 {align-self:center;}
     .page {display:grid;grid-template-columns:1fr 2fr 4fr 1fr;border-top:1px solid #f5f6f7;}
         .menu {padding:20px;border-right:1px solid #e6ecf1;grid-column:2/span 1;justify-self:end;}
+        	.menu ul {margin:0 0 0 16px;padding:4px;list-style:url(../images/arrow-right.svg);}
         .content {background:#fff;padding:20px;grid-column:span 1;overflow:auto;}
             .content img {width:100%;height:auto;}
     .footer {background:#fff;border-top:1px solid #d4dadf;font-size:14px;text-align:center;}
