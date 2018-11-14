@@ -8,7 +8,7 @@ body {margin:0;padding:0;background:#f5f7f9;font-family:'Roboto',sans-serif;font
 a {text-decoration:none;color:#744cbc;}
 a:hover {}
 h1 {font-size:60px;font-weight:400;}
-h2 {color:#3B454E;font-size:28px;line-height:150%;}
+h2 {color:#3B454E;font-size:28px;border-bottom:1px solid #e6ecf1;border-left:4px solid #744cbc;padding:20px;margin-bottom:40px;}
 h3 {}
 h4 {font-size:24px;padding:10px 0;margin:20px 0 10px;border-bottom:1px solid #d4dadf;line-height:150%;text-transform:uppercase;}
 ul, ol {margin:0 0 0 16px;padding:4px;list-style:url(../images/arrow-right.svg);}
