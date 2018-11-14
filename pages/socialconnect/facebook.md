@@ -1,4 +1,6 @@
-## SocialConnect for Joomla: How to setup Facebook login and autoposting 
+## Facebook Integration in SocialConnect
+
+### How to setup Facebook login and autoposting
 
 #### Step 1
 
@@ -75,3 +77,14 @@ You are now ready to accept logins via Facebook as well as allow autoposting to 
 If you now switch back to the "Dashboard" and see "Finish Facebook Login Quickstart" showing, you can go ahead and click to close that notification as it's not required.
 
 ![Status: Live](images/socialconnect/6.png)
+
+
+### How to setup Facebook Comments
+If you wish to enable Facebook Comments on your site, you can simply re-use your "App ID" which you got when setting up your Facebook application before.
+
+The settings in detail:
+- Facebook comments application ID: Just copy the Facebook "App ID" here.
+- Facebook comments width: The width of the Facebook Comments block in pixels.
+- Facebook comments color scheme: The color scheme of the Facebook Comments block.
+- Facebook number of comments: The number of comments to show when the Facebook Comments block is loaded.
+- Facebook comments ordering: The ordering of the comments in the Facebook Comments block.
