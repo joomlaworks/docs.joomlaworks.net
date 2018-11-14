@@ -13,6 +13,8 @@
 
     Basic conventions (for things to work as easy as possible):
     - You only need an entry index.html file to load everything.
+    - Use 2 data-attributes (data-sd-menu & data-sd-content) in any HTML element
+      where you want to output the menu and content (markdown page).
     - Add the JS files in order according to the requirements stated above (jQuery, Showdown.js, SimpleDocs.js).
     - Store markdown (.md) documents in the /pages/ subfolder by default.
     - Your are free to store your CSS, JS, images etc. wherever you want.
@@ -30,8 +32,8 @@
 
 (function($) {
     // Configuration
-    var outputContainer = '#content';
-    var navContainer = '#menu';
+    var outputContainer = '[data-sd-content]';
+    var navContainer = '[data-sd-menu]';
     var gaDomain = ''; // e.g. https://docs.joomlaworks.net
 
     // Parse Markdown (showdown.js)
