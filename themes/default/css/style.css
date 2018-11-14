@@ -21,6 +21,7 @@ ul, ol {margin:0 0 0 16px;padding:4px;}
         .header h1 {align-self:center;}
             .header h1 a {font-family:'Source Sans Pro',sans-serif;font-size:40px;font-weight:400;color:#fff;background:url(../images/JoomlaWorks_Logo_White_320x60_24.png) 0 50% no-repeat;padding:4px 0 4px 340px;}
             .header h1 a span {display:none;}
+            .header h1 a:hover {text-decoration:none;}
     .page {display:grid;grid-template-columns:1fr 2fr 4fr 1fr;border-top:1px solid #f5f6f7;}
         .menu {padding:20px;border-right:1px solid #e6ecf1;grid-column:2/span 1;justify-self:end;}
             .menu ul {margin:0 0 0 16px;padding:4px;list-style:url(../images/arrow-right.svg);}
