@@ -44,8 +44,8 @@
         if (domain && typeof(ga) !== 'undefined') {
             ga('send', {
                 hitType: 'pageview',
-                title: title,
-                page: url.replace(domain, '')
+                title: document.title,
+                page: window.location.href.replace(domain, '')
             });
         }
     }
