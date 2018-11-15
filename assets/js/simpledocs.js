@@ -34,7 +34,7 @@
     // Configuration
     var outputContainer = '[data-sd-content]';
     var navContainer = '[data-sd-menu]';
-    var gaDomain = ''; // e.g. https://docs.joomlaworks.net
+    var gaDomain = 'https://docs.joomlaworks.net'; // e.g. https://docs.joomlaworks.net
 
     // Parse Markdown (showdown.js)
     var converter = new showdown.Converter();
