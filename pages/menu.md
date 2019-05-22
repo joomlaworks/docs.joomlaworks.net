@@ -10,3 +10,5 @@
     * [AllVideos](pages/allvideos.md)
     * [Simple Image Gallery](pages/sig.md)
     * [Simple RSS Feed Reader](pages/srfr.md)
+* Reference
+    * [CSS Colors](pages/reference/csscolors.md)

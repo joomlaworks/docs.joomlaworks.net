@@ -35,3 +35,8 @@ ul, ol {margin:0 0 0 16px;padding:4px;}
     .page {display:grid;grid-template-columns:1fr 2fr;}
         .menu {grid-column:span 1;}
 }
+
+/* Page Styling */
+table.reference {width:90%;text-align:center;margin:0 auto;}
+table.reference tr th,
+table.reference tr td {padding:10px;text-align:center;}
