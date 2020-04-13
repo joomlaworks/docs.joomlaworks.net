@@ -1,8 +1,8 @@
 /**
- * @version     1.0
+ * @version     1.1
  * @package     SimpleDocs.js
  * @author      JoomlaWorks https://www.joomlaworks.net
- * @copyright   Copyright (c) 2006 - 2018 JoomlaWorks Ltd. All rights reserved.
+ * @copyright   Copyright (c) 2006 - 2020 JoomlaWorks Ltd. All rights reserved.
  * @license     https://www.joomlaworks.net/license
  */
 
