@@ -87,6 +87,7 @@
         $(el + ' a[href*="pages/"]').each(function() {
             var title = $(this).html();
             var page = $(this).attr('href');
+            $(this).attr('href', '#/' + page);
             $(this).on('click', function(e) {
                 e.preventDefault();
                 getPage(page, title, outputContainer, true);
