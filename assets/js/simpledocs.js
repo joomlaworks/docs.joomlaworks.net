@@ -66,25 +66,25 @@
     // Get page
     function getPage(page, title, container, urlstate) {
         $.ajax({
-            url: page,
+            url: page + '.md',
             success: function(result) {
                 var output = converter.makeHtml(result);
                 $(container).html(output);
                 if (urlstate) {
-                    updateBrowser('#/' + page.slice(0, page.length - 3), title, output);
+                    updateBrowser('#/' + page, title, output);
                 }
                 parseUrls(container);
                 $(container).scrollTop(0);
             },
             error: function(req, status, error) {
-                getPage('pages/404.md', '404 - Not found', container, true)
+                getPage('pages/404', '404 - Not found', container, true)
             }
         });
     }
 
     // Parse all .md URLs
     function parseUrls(el) {
-        $(el + ' a[href\$=".md"]').each(function() {
+        $(el + ' a[href*="pages/"]').each(function() {
             var title = $(this).html();
             var page = $(this).attr('href');
             $(this).on('click', function(e) {
@@ -96,7 +96,7 @@
 
     // Render the navigation menu
     function renderNav() {
-        var page = 'pages/menu.md';
+        var page = 'pages/menu';
         getPage(page, false, navContainer, false);
     }
 
@@ -111,10 +111,10 @@
             var match = null;
         }
         if (match) {
-            var page = match + ".md";
+            var page = match;
             getPage(page, false, outputContainer, urlstate);
         } else {
-            var page = 'pages/index.md';
+            var page = 'pages/index';
             getPage(page, false, outputContainer, urlstate);
         }
     }

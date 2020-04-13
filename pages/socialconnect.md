@@ -20,6 +20,6 @@ You can check anytime the system requirements by visiting the SocialConnect Dash
 
 ### Integration
 
-* [Facebook Integration](pages/socialconnect/facebook.md)
+* [Facebook Integration](pages/socialconnect/facebook)
 
 More to follow as we move the documentation from [https://www.joomlaworks.net/support/docs/socialconnect](https://www.joomlaworks.net/support/docs/socialconnect).
